@@ -76,7 +76,8 @@ if(isset($_POST['envoyer']) AND $_POST['password'] === $_POST['confirm_password'
     </h1>
     <?php
      if (isset($messageok)) {
-        echo '<p class="col-12 text-center h5 text-success">' .$messageok.' </p>';
+        echo '<p class="col-12 text-center h5 text-success">' .$messageok.' </p>
+        <a href="connexion.php" class="btn btn-primary d-block col-9 col-sm-6 col-md-4 col-lg-3 ml-auto mr-auto mb-4">Connexion</a>';
     } 
      if (isset($message)) {
         echo '<p class="col-12 text-center h5 text-danger">' .$message.' </p>';

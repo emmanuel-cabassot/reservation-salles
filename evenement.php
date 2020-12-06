@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RésaSalle</title>
+    <title>RésaSalle cours</title>
 </head>
 <body>
 <header>
@@ -18,7 +18,7 @@
         <h1><?php  echo $_GET['titre'].' ( '.$_GET['login'].' )';?></h1>
         <!-- Le jour, Heure de début et de fin -->
         <p class="heure_evenement">
-            <?php require('fonction.php');echo Jour($_GET['jour']);?> De <?php $date = new DateTime($_GET['heure_debut']);echo $date->format('H');?>
+            <?php require('fonction.php');echo Jour($_GET['jour']).' '.$_GET['jour_chiffre']?> de <?php $date = new DateTime($_GET['heure_debut']);echo $date->format('H');?>
         à  <?php $dates = new DateTime($_GET['heure-fin']);echo $dates->format('H');?>h</p>
         <!-- Description -->
         <p><?php echo $_GET['description']?></p>           

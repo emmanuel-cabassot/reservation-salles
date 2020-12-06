@@ -82,7 +82,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 td{
     border: 1px solid white;
@@ -132,6 +132,7 @@ td a:hover{
 
 .page_evenement h1{
     margin-bottom: 0px;
+    font-size: 1.7em;
 }
 
 .heure_evenement{
