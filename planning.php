@@ -167,7 +167,7 @@ for ($jour;  $jour < $dates['mday'] + 7 ; $jour++) {
 
         // Si l'on est un autre jour que dimanche 
         if ($fin != 0) {
-                if ($fin +7 === $dates['wday']) {
+                if ($fin +6 === $dates['wday']) {
                         echo '</tr>';
                         break;
                 }
