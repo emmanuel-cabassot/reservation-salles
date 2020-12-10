@@ -22,11 +22,11 @@ if (isset($_POST['envoyer']) AND  $_POST['password'] != $_POST['confirm_password
 {
     $message = 'Mot de passe et confirmation du mot de passe sont différents';
 }
-// Autre contrôle pour vérifier si la variable $_POST['Bouton'] est bien définie et que la confirmation du mot de pass est ok
+// Autre contrôle pour vérifier si la variable $_POST['Bouton'] est bien définie et que la confirmation du mot de passe est ok
 if(isset($_POST['envoyer']) AND $_POST['password'] === $_POST['confirm_password']) 
 {   
     //enregistre les variables de login et password
-    $login = htmlspecialchars($_POST['login']);
+    $login = htmlspecialchars($_POST['login'], ENT_QUOTES);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     //Vérifie que le login n'est pas déjà pris et est inconnu dans la BDD
@@ -61,7 +61,7 @@ if(isset($_POST['envoyer']) AND $_POST['password'] === $_POST['confirm_password'
 <html lang="fr">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RésaSalles_inscription</title>

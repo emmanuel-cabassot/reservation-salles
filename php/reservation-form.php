@@ -40,8 +40,8 @@ if (isset($_POST['debut'])) {
         if (!isset($message_erreur)) {
             $req = $bdd->prepare('INSERT INTO reservations(titre, description, debut, fin, id_utilisateur) VALUES(:titre, :description, :debut, :fin, :id_utilisateur)');
             $req->execute(array(
-            'titre' => htmlspecialchars($_POST['titre']),
-            'description' => htmlspecialchars($_POST['description']),
+            'titre' => htmlspecialchars($_POST['titre'], ENT_QUOTES),
+            'description' => htmlspecialchars($_POST['description'], ENT_QUOTES),
             'debut' => htmlspecialchars($_POST['date'].' '. $_POST['debut'].':00:00'),
             'fin' => htmlspecialchars($_POST['date'].' '. $_POST['fin'].':00:00'),
             'id_utilisateur' => $_SESSION['id']
@@ -59,7 +59,7 @@ if (isset($_POST['debut'])) {
 <html lang="fr">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RésaSalles réserver</title>

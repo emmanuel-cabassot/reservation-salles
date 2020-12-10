@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RésaSalle cours</title>
@@ -18,8 +18,11 @@
         <h1><?php  echo $_GET['titre'].' ( '.$_GET['login'].' )';?></h1>
         <!-- Le jour, Heure de début et de fin -->
         <p class="heure_evenement">
-            <?php require('fonction.php');echo Jour($_GET['jour']).' '.$_GET['jour_chiffre']?> de <?php $date = new DateTime($_GET['heure_debut']);echo $date->format('H');?>
-        à  <?php $dates = new DateTime($_GET['heure-fin']);echo $dates->format('H');?>h</p>
+            <?php 
+            require('fonction.php');
+            echo Jour($_GET['jour']).' '.$_GET['jour_chiffre']?> de <?php $date = new DateTime($_GET['heure_debut']);echo $date->format('H');?>
+            à  
+            <?php $dates = new DateTime($_GET['heure-fin']);echo $dates->format('H');?>h</p>
         <!-- Description -->
         <p><?php echo $_GET['description']?></p>           
     </section>

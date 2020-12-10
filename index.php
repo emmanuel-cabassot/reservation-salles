@@ -10,7 +10,55 @@
 </head>
 <body>
 <header>
-  <?php require('header.php') ?>
+    <!-- UTILISATION DE BOOTSTRAP -->
+  <section class="navbar navbar-expand-md navbar-dark bg-primary">
+      <div class="container-fluid">
+          <a class="navbar-brand ml-4 " href="../index.php"> 
+          RésaSalle
+          </a>
+
+          <!--menu burger-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- barre nav -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav nav-fill ml-auto">
+                  <li class="nav-item ml-3 ">
+                      <a class="nav-link" href="index.php">Accueil</a>
+                  </li>
+                  <li class="nav-item ml-3">
+                      <a class="nav-link" href="php/planning.php">Planning</a>
+                  </li>            
+                  <li class="nav-item ml-3" >
+                  <?php 
+                  if (isset($_SESSION['login'])) {
+                      echo '<a class="nav-link" href="php/profil.php" >Profil</a>';
+                  }
+                  else {
+                      echo '<a class="nav-link" href="php/inscription.php" >S\'inscrire</a>';
+                  }
+                  ?>
+                  </li>
+                  <li class="nav-item ml-3 mr-3">
+                      <?php
+                  if (isset($_SESSION['login'])) {
+                      echo '<a class="nav-link" href="php/deconnexion" >Se déconnecter</a>';
+                  }
+                  else {
+                      echo '<a class="nav-link" href="php/connexion.php" >Se connecter</a>';
+                  }
+                  ?>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </section>
+  <!--  FIN DU CALVAIRE et retour a un peu de CSS -->
+  <section class="background">
+      <p class="text-center">Réservez votre salle de fitness</p>
+</section>
 </header>
 <main class="main_index justify-content-center">
   <h1 class="col-12 text-center h3  text-primary mt-4">
@@ -47,7 +95,21 @@
   </section>
 </main>
 <footer>
-    <?php require('footer.php') ?>
+  <section class="footer_logo">
+      <a href="index.php"><img src="images/logo.png" alt="logo outils"> RésaSalle</a>
+  </section>
+  <address>
+      ResaSalle,
+      17 impasse du Pharo,
+      13007 Marseille
+  </address>
+  <section class="social">
+      <ul>
+          <li><a href="https://twitter.com/?lang=fr" target="_blank"><img src="images/twitter.png" alt="logo twitter"></a></li>
+          <li><a href="https://fr-fr.facebook.com/" target="_blank"><img src="images/facebook.png" alt="logo facebook"></a></li>
+          <li><a href="https://www.instagram.com/?hl=fr" target="_blank"><img src="images/instagram.png" alt="logo instagram"></a></li>
+      </ul>   
+  </section>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>   
 </body>

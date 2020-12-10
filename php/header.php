@@ -1,7 +1,7 @@
 <!-- UTILISATION DE BOOTSTRAP -->
 <section class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand ml-4 " href="index.php"> 
+        <a class="navbar-brand ml-4 " href="../index.php"> 
         RésaSalle
         </a>
 
@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-fill ml-auto">
                 <li class="nav-item ml-3 ">
-                    <a class="nav-link" href="index.php">Accueil</a>
+                    <a class="nav-link" href="../index.php">Accueil</a>
                 </li>
                 <li class="nav-item ml-3">
                     <a class="nav-link" href="planning.php">Planning</a>
