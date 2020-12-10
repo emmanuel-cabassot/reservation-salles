@@ -88,7 +88,7 @@
           <p>Grande salle pouvant accueillir 28 personnes.<br>
           matériel sur place: tapis de gym, des poids légers, tapis et coussins de méditation<br>
           La salle est située au 23 Boulevard de la libération, 13001 Marseille</p>
-          <a href="planning.php" class="btn btn-primary col-12">Planning et réservation</button></a>
+          <a href="php/planning.php" class="btn btn-primary col-12">Planning et réservation</button></a>
         </section>
       </section>
     </section>
